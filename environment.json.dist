@@ -1,0 +1,16 @@
+{
+"credentials" : {
+    "sysadmin" :{
+        "username":"",
+        "password":""
+        },
+        "standardUser" : {
+             "username" : "",
+             "password" : ""
+           }
+         },
+         "url": "https://todoist.com/users/showlogin",
+           "timeout": {
+             "explicit" : 30000
+           }
+       }
