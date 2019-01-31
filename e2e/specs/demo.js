@@ -21,7 +21,20 @@ describe('Login to todoist', () => {
         CommonActions.click('#filter_inbox')
 
         CommonActions.click('.action_add_item');
-        CommonActions.setValue('.richtext_editor ', 'testingtask 1');
+        CommonActions.setValue('.richtext_editor ', 'testingtask 8');
+
+
+        CommonActions.click(' .icon_priority[data-track="task_form|priority"]');
+        CommonActions.click(' .ist_menu.priority_menu .priorities .icon_priority_2');
+
+
+        CommonActions.click('.input_due_date');
+
+
+
+
+
+
 
 
         CommonActions.click('.ist_button');
