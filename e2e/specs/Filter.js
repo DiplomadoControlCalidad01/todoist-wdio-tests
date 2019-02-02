@@ -4,7 +4,7 @@ const credentials = require ('../../environment').credentials;
 const CommonActions = require('../core/CommonActions');
 const Login = require('../pages/login');
 
-describe('Filter tasks', () => {
+describe('Filter tasks, Projects', () => {
     it('Login', () => {
         browser.url('https://todoist.com/users/showlogin');
 

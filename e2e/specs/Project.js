@@ -24,6 +24,9 @@ describe('create a Project', () => {
         CommonActions.setValue('.sel_richtext_editor', 'testingProject 1');
 
 
+
+
+
         CommonActions.click('.ist_button');
 
 

@@ -1,5 +1,6 @@
 const CommonActions = require('../core/CommonActions');
 const {explicit} = require ('../../environment').timeout;
+const Topbar = require('../pages/topbar');
 
 class Login{
 
@@ -22,6 +23,7 @@ class Login{
         login.setEmailTextField(username);
         login.setPasswordTextField(password);
         login.clickLoginButton();
+        return new Topbar();
     }
 
 }

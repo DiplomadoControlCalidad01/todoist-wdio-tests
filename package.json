@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "wdio"
+    "test": "wdio",
+    "brwoserstack": "wdio wdio.browserstack.conf.js"
   },
   "author": "",
   "license": "ISC",
@@ -12,8 +13,10 @@
     "webdriverio": "^4.14.2"
   },
   "devDependencies": {
+    "wdio-browserstack-service": "^0.1.18",
     "wdio-mocha-framework": "^0.6.4",
     "wdio-selenium-standalone-service": "0.0.12",
-    "wdio-spec-reporter": "^0.1.5"
+    "wdio-spec-reporter": "^0.1.5",
+    "webdriverio": "^4.14.2"
   }
 }
