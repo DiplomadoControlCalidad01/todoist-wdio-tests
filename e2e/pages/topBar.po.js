@@ -1,7 +1,7 @@
 const CommonActions = require('../core/CommonActions');
 const {explicit} = require ('../../environment').timeout;
 
-class TopBar{
+class TopBarPo{
 
     constructor(){
         this.SearchField = '.quick_find';

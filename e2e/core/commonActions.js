@@ -27,9 +27,11 @@ class CommonActions {
     static selectByValue(locator, value){
         browser.waitForVisible(locator,explicit);
         browser.element(locator).selectByValue(value);
-
-
     }
 
+    static enter(locator) {
+        browser.waitForVisible(locator, explicit);
+        browser.keys('\n');
+    }
 }
 module.exports = CommonActions;
