@@ -3,7 +3,7 @@
 const credentials = require ('../../environment').credentials;
 const CommonActions = require('../core/CommonActions');
 const Login = require('../pages/login');
-const Content = require('../pages/content');
+
 
 describe('Create a Task', () => {
     it('Login', () => {

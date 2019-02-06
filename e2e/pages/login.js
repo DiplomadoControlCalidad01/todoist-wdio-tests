@@ -1,6 +1,8 @@
 const CommonActions = require('../core/CommonActions');
 const {explicit} = require ('../../environment').timeout;
-const Topbar = require('./topBar.po');
+const TopBar = require('./topBar.po');
+const InboxPage = require('./inboxPage.po');
+const LeftMenu = require('./leftMenu.po');
 
 class Login{
 
@@ -18,12 +20,27 @@ class Login{
     clickLoginButton(){
         CommonActions.click('#login_form a[href="#"');
     }
-    static loginAs(username, password){
+    static loginAs(username, password, component){
         let login = new Login();
         login.setEmailTextField(username);
         login.setPasswordTextField(password);
         login.clickLoginButton();
-        return new Topbar();
+
+        let componentResult;
+        switch(component){
+            case "inboxPage":
+                componentResult = new InboxPage();
+                break;
+            case "leftMenu":
+                componentResult = new LeftMenu();
+                break;
+            case "topBar":
+                componentResult = new TopBar();
+                break;
+        }
+        CommonActions.waitForInVisible('#loading');
+        return componentResult;
+
     }
 
 }
