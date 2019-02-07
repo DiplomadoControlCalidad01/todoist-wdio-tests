@@ -10,7 +10,7 @@ exports.config = {
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
     specs: [
-        './e2e/specs/addTask.js'
+        './e2e/specs/addProject.js'
     ],
     // Patterns to exclude.
     exclude: [

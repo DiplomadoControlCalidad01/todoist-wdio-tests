@@ -1,18 +1,23 @@
 
 const credentials = require ('../../environment').credentials;
+const CommonActions = require('../core/CommonActions');
 const Login = require('../pages/login');
 const expect = require('chai').expect;
 
-describe('Create a Project', ()=> {
-    it('New Project', () => {
+
+describe('Sort tasks by name', ()=> {
+    it('Sorted', () => {
         browser.url('https://todoist.com/users/showlogin');
 
-        let test1 = Login.loginAs(credentials.sysadmin.username, credentials.sysadmin.password, 'leftMenu');
-        test1.clickAddProject();
-        test1.setNameNewProject('testProject19');
-        test1.clickAddProjectButton();
+        CommonActions.waitForVisible('.login_singup_form', 30000);
 
+        let test1 = Login.loginAs(credentials.sysadmin.username, credentials.sysadmin.password, 'leftMenu');
+        let test2 =test1.clickInboxOption();
+
+        test2.clickProjectActionMenu();
+        test2.setSortByName();
+        console.log(test2.getItems().value[0]);
         browser.pause(30000);
-        expect(test1.getProjectName()[0]).to.equal('testProject19');
+
     })
 })

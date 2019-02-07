@@ -39,6 +39,7 @@ class Login{
                 break;
         }
         CommonActions.waitForInVisible('#loading');
+
         return componentResult;
 
     }

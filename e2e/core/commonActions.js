@@ -29,9 +29,22 @@ class CommonActions {
         browser.element(locator).selectByValue(value);
     }
 
-    static enter(locator) {
-        browser.waitForVisible(locator, explicit);
+    static enter() {
+       // browser.waitForVisible(locator, explicit);
         browser.keys('\n');
+    }
+    static getTaskName(locator){
+        browser.waitForVisible(locator,explicit);
+        return browser.getText(locator);
+    }
+    static getProjectName(locator){
+        browser.waitForVisible(locator,explicit);
+        return browser.getText(locator);
+    }
+
+    static getItems(locator){
+        browser.waitForVisible(locator,explicit);
+        return browser.elements(locator);
     }
 }
 module.exports = CommonActions;

@@ -2,6 +2,7 @@
 const credentials = require ('../../environment').credentials;
 const CommonActions = require('../core/CommonActions');
 const Login = require('../pages/login');
+const expect = require('chai').expect;
 
 
 describe('Create a Task', ()=> {
@@ -17,5 +18,9 @@ describe('Create a Task', ()=> {
         test2.setNewTaskName('test1task');
         test2.setPriority2Task();
         test2.clickCreateTaskButton();
+
+        expect(test2.getTaskName()).to.equal('test1task');
+
+
     })
 })

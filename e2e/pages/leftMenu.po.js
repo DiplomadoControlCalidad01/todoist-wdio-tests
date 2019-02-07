@@ -13,7 +13,8 @@ class LeftMenu{
         this.setNameProject ='.richtext_editor.sel_richtext_editor';
         this.filterToMe     ='.//span[.=\'Assigned to me\']';
         this.filterToOthers ='.//span[.=\'Assigned to others\']';
-        this.addProjectButton='.ist_button';
+        this.addProjectButton='.ist_button[data-track="projects|add_confirm"]';
+        this.projectName     ='.//span[.=\'testProject19\']';
 
     }
 
@@ -34,6 +35,9 @@ class LeftMenu{
        clickAddProject(){
         CommonActions.click(this.addProject);
        }
+       clickAddProjectButton(){
+        CommonActions.click(this.addProjectButton);
+       }
        clickFilterOption(){
         CommonActions.click(this.filterOption);
        }
@@ -42,6 +46,7 @@ class LeftMenu{
        }
        setNameNewProject(nameProject){
         CommonActions.setValue(this.setNameProject, nameProject);
+       // CommonActions.enter();
        }
        clickFilterToMe(){
         CommonActions.click(this.filterToMe);
@@ -49,5 +54,8 @@ class LeftMenu{
        clickFilterToOthers(){
         CommonActions.click(this.filterToOthers);
        }
+       getProjectName() {
+        return CommonActions.getProjectName(this.projectName);
+    }
 }
 module.exports =LeftMenu;
