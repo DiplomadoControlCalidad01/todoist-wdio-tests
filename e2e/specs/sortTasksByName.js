@@ -17,7 +17,7 @@ describe('Sort tasks by name', ()=> {
         test2.clickProjectActionMenu();
         test2.setSortByName();
         console.log(test2.getItems().value[0]);
-        browser.pause(30000);
+
 
     })
 })

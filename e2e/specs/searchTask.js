@@ -14,6 +14,6 @@ describe('Seacrh tasks', ()=> {
 
         test1.setSearchField('test');
 
-        browser.pause(30000);
+
     })
 })

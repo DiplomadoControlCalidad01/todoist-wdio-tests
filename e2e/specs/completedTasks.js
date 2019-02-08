@@ -9,6 +9,6 @@ describe('review tasks completed', ()=> {
         let test2 = test1.clickInboxOption();
 
         test2.reviewCompletedTasks();
-        browser.pause(30000);
+
     })
 })
