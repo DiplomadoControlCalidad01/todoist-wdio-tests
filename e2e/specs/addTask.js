@@ -10,16 +10,19 @@ describe('Create a Task', ()=> {
         browser.url('https://todoist.com/users/showlogin');
 
         CommonActions.waitForVisible('.login_singup_form', 30000);
-
         let test1 = Login.loginAs(credentials.sysadmin.username, credentials.sysadmin.password, 'leftMenu');
         let test2 =test1.clickInboxOption();
-
+        let newTask = {
+            name:'test1task2'
+        }
         test2.addNewTaskButton();
-        test2.setNewTaskName('test1task');
+        test2.setNewTaskName(newTask.name);
         test2.setPriority2Task();
         test2.clickCreateTaskButton();
+        test2.getParametersList();
 
-        expect(test2.getTaskName()).to.equal('test1task');
+        let createdTask = test2.getParametersList();
+        expect(createdTask[createdTask.length - 2]).to.equal(newTask.name);
 
 
     })

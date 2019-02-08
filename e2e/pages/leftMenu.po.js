@@ -15,6 +15,7 @@ class LeftMenu{
         this.filterToOthers ='.//span[.=\'Assigned to others\']';
         this.addProjectButton='.ist_button[data-track="projects|add_confirm"]';
         this.projectName     ='.//span[.=\'testProject19\']';
+        this.projectsList        = $('#projects_list ');
 
     }
 
@@ -56,6 +57,13 @@ class LeftMenu{
        }
        getProjectName() {
         return CommonActions.getProjectName(this.projectName);
+    }
+    getProjectsList(){
+        // let elem = this.list.elements('li').value.map(e=>{
+        //     console.log(e)
+        // });
+        // console.log(this.list.elements('li').getText());
+        return this.projectsList.elements('li').getText();
     }
 }
 module.exports =LeftMenu;
